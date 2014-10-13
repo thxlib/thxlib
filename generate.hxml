@@ -1,0 +1,4 @@
+-cp src
+-x Main
+-lib yaml
+-lib thx.core

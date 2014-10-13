@@ -1,0 +1,37 @@
+--no-output
+-D doc-gen
+-D display
+-D dox
+-dce no
+
+--each
+-xml tmp/xml/js.xml
+-js _
+
+--next
+-xml tmp/xml/swf.xml
+-swf-version 11.4
+-swf _
+
+--next
+-xml tmp/xml/neko.xml
+-neko _
+
+--next
+-xml tmp/xml/php.xml
+-php _
+
+--next
+-xml tmp/xml/cpp.xml
+-cpp _
+-D xmldoc
+
+--next
+-xml tmp/xml/java.xml
+-java _
+-D xmldoc
+
+--next
+-xml tmp/xml/cs.xml
+-cs _
+-D xmldoc
