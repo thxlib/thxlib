@@ -2,6 +2,6 @@
 -cmd mkdir -p xml
 -cmd haxe build_doc.hxml
 -cmd rm -rf pages
--cmd haxelib run dox -r / -o pages -i xml --title "thx libraries" -in thx
+-cmd haxelib run dox -r /api/ -o pages -i xml --title "thx libraries" -in thx
 -cmd rm -rf ../../thxlib-pages/api
 -cmd cp -r pages ../../thxlib-pages/api
