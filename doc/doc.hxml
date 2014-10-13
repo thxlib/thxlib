@@ -3,5 +3,5 @@
 -cmd haxe build_doc.hxml
 -cmd rm -rf pages
 -cmd haxelib run dox -r /api/ -o pages -i xml --title "thx libraries" -in thx
--cmd rm -rf ../../thxlib-pages/api
--cmd cp -r pages ../../thxlib-pages/api
+-cmd rm -rf ../../thxlib.github.io/api
+-cmd cp -r pages ../../thxlib.github.io/api
