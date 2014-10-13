@@ -1,0 +1,63 @@
+-cp ../../thx.core/src
+-cp ../../thx.core/doc
+-cp ../../thx.color/src
+-cp ../../thx.color/doc
+-cp ../../thx.unit/src
+-cp ../../thx.unit/doc
+-cp ../../thx.promise/src
+-cp ../../thx.promise/doc
+-cp ../../thx.semver/src
+-cp ../../thx.semver/doc
+-cp ../../thx.stream/src
+-cp ../../thx.stream/doc
+--no-output
+-D doc-gen
+-D display
+-D dox
+-dce no
+ImportCore
+ImportColor
+ImportUnit
+ImportPromise
+ImportSemver
+ImportStream
+
+--each
+-xml xml/js.xml
+-js _
+
+--next
+-xml xml/swf.xml
+-swf-version 11.4
+-swf _
+
+--next
+-xml xml/neko.xml
+-neko _
+
+--next
+-xml xml/php.xml
+-php _
+
+--next
+-xml xml/cpp.xml
+-cpp _
+-D xmldoc
+
+--next
+-xml xml/java.xml
+-java _
+-D xmldoc
+
+--next
+-xml xml/cs.xml
+-cs _
+-D xmldoc
+
+#--next
+#-xml xml/python.xml
+#-python _
+#-D xmldoc
+
+#--next
+#-xml xml/cross.xml
