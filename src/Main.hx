@@ -5,6 +5,7 @@ import yaml.Yaml;
 using thx.core.Arrays;
 using thx.core.Strings;
 using StringTools;
+import thx.core.Objects;
 
 class Main {
   static var libraryListFile = "data/libraries.json";
@@ -74,9 +75,15 @@ class Main {
     var path = "../thxlib.github.io/lib/";
     cleanDir(path);
     libraryInfo.map(function(item) {
+      var info = {
+        layout : "library",
+        title : item.info.name
+      };
+      Objects.tuples(item.info).map(function(t) {
+        Reflect.setField(info, t._0, t._1);
+      });
       var content = '---
-layout: library
-title: ${item.info.name}
+${Yaml.render(info)}
 ---
 
 ${item.readme}';
