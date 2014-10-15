@@ -110,7 +110,7 @@ ${item.readme}';
   }
 
   function generatePages() {
-    haxelibRun(["dox", "-r", "/api/", "-o", '${tmp}pages', "-i", '${tmp}xml', "--title", "thx libraries", "-in", "thx"]);
+    haxelibRun(["dox", "-o", '${tmp}pages', "-i", '${tmp}xml', "--title", "thx libraries", "-in", "thx", "-D", "source-path", "/go/#"]);
   }
 
   function copyDocPages() {
