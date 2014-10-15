@@ -1,0 +1,270 @@
+body,html {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.navbar {
+    position: static;
+    margin: 0;
+}
+
+a {
+    color: #006699;
+}
+
+pre {
+    background-color: #f8f8f8;
+}
+
+#container {
+    height: 95%;
+}
+
+#nav {
+    overflow-y: scroll;
+    height: 100%;
+    float: left;
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#content {
+    overflow-y: scroll;
+    height: 100%;
+    background: #f9f9f9;
+    padding: 0 12px;
+    margin-top: 40px;
+    box-shadow: -1px 1px 1px #ddd, -3px 1px 3px #f6f6f6;
+}
+
+.doc {
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+.toggle-on .toggle-hide {
+    display: none;
+}
+
+.toggle-on .toggle-show {
+    display: block;
+}
+
+.related-types .toggle-hide {
+    padding-top: 4px;
+}
+
+.availability {
+    margin-left: 14px;
+    color: #93a1a1;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#nav li {
+    list-style-type: none;
+}
+
+#nav ul,#nav li li {
+    margin-left: 14px;
+}
+
+#nav img {
+    padding-right: 4px;
+}
+
+#nav.searching .pack {
+    display: inline;
+}
+
+code {
+    background: #FDF6E3;
+    color: #002b36;
+    tab-size: 4;
+}
+
+code a {
+    text-decoration: none;
+}
+
+code a:hover {
+    text-decoration: underline;
+}
+
+code .identifier {
+    color: #002b36;
+}
+
+code .type {
+    color: #268bd2;
+}
+
+code .keyword {
+    color: #dc322f;
+}
+
+code .directive {
+    color: #2aa198;
+}
+
+code .constant {
+    color: #AE81FF;
+}
+
+code .string {
+    color: #E6DB74;
+}
+
+code .macro {
+    color: #A6E22A;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+}
+
+.navbar-fixed-top .navbar-inner,.navbar-fixed-bottom .navbar-inner {
+    padding: 0;
+}
+
+#nav ul li {
+    padding: 0 0 0 5px;
+}
+
+#nav ul li li {
+    padding: 0 0 0 10px;
+}
+
+#nav ul li li li {
+    padding: 0 0 0 15px;
+}
+
+.platform div a:nth-child(2) {
+    color: #333;
+}
+
+.body .platform {
+    background: #fff;
+    margin-bottom: 1em;
+    border: 1px solid #eee;
+    padding: 0 5px;
+}
+
+h3 code, h1 code {
+    font-size: 13px;
+    background: none;
+    border: 0;
+    display: block;
+    padding: 0 4px;
+}
+
+h3 code .identifier {
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0 3px 0 0;
+}
+
+h2 {
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+#content .header {
+    position: relative;
+    background: none;
+    left: 0;
+    font-size: 24px;
+    border-bottom: 0 solid #EEE;
+    padding: 10px 5px 0;
+}
+
+#content .body {
+    padding-top: 0;
+}
+
+h1 code, h1 code .type, h1 code .keyword {
+    border: 0;
+    font-size: 22px;
+    color: #000;
+    font-weight: 400;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0;
+}
+
+h1 code .keyword {
+    font-size: 16px;
+}
+
+h1 code .type {
+    font-size: 28px;
+}
+
+h1 code .directive {
+    color: #666;
+}
+
+h3 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.toggle-hide,#nav .expando.expanded > ul,#nav.searching .expando > ul {
+    display: block;
+}
+
+.toggle-show,#nav .expando > ul,#nav .pack,#nav.searching .expando > div {
+    display: none;
+}
+
+#nav.searching ul,#nav ul {
+    margin-left: 0;
+}
+
+code .comment,code .inactive {
+    color: #75715E;
+}
+
+.viewsource {
+    font-size: 12px;
+    border: 1px solid #0088cc;
+    padding: 4px 8px 3px;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #eee;
+    border-color: #aaa;
+    background-image: none;
+}
+
+.navbar-inverse .navbar-search input.search-query {
+    background-color: #ddd;
+    border-color: #bbb;
+    color: #444;
+    margin-left: 4px;
+}
+
+.navbar-inverse .nav > li > a:hover {
+    color: #000;
+}
+
+.navbar-inverse .navbar-search input.search-query::input-placeholder {
+    color: #666;
+}
+.navbar-inverse .navbar-search input.search-query::-moz-placeholder {
+    color: #666;
+}
+.navbar-inverse .navbar-search input.search-query:-ms-input-placeholder {
+    color: #666;
+}
+.navbar-inverse .navbar-search input.search-query::-webkit-input-placeholder {
+    color: #666;
+}

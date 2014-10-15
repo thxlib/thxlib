@@ -19,12 +19,13 @@ class Main {
   var dataPath : String;
   var build_doc : Array<String>;
   var tmp : String;
+  var cwd : String;
   var libraryInfo : Array<{ info : Dynamic, readme : String }>;
   public function new() {
 
     // store haxelib
+    cwd = Sys.getCwd();
     var originalHaxelibPath = getHaxelibPath(),
-        cwd = Sys.getCwd(),
         requirements : Array<{ name : String }> = Json.parse(File.getContent(requirementListFile)),
         libraries : Array<{ name : String }> = Json.parse(File.getContent(libraryListFile));
 
@@ -110,7 +111,17 @@ ${item.readme}';
   }
 
   function generatePages() {
-    haxelibRun(["dox", "-o", '${tmp}pages', "-i", '${tmp}xml', "--title", "thx libraries", "-in", "thx", "-D", "source-path", "/go/#"]);
+    haxelibRun(["dox",
+      "--output-path", '${tmp}pages',
+      "--input-path", '${tmp}xml',
+      //"--template-path", '',
+      //"--resource-path", '', // can repeat
+      "--toplevel-package", "thx",
+      "-theme", '${cwd}/theme/thx/',
+      "--title", "thx libraries",
+      "--include", "thx",
+      "--define", "source-path", "/go/#"
+    ]);
   }
 
   function copyDocPages() {
