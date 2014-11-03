@@ -1,6 +1,8 @@
 [
   { "name" : "thx.core" },
   { "name" : "thx.color" },
+  { "name" : "thx.culture" },
+  { "name" : "thx.format" },
   { "name" : "thx.promise" },
   { "name" : "thx.stream" },
   { "name" : "thx.semver" },
