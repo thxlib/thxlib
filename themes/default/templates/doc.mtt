@@ -1,0 +1,34 @@
+::raw info.doc::
+
+<table class="table table-condensed" ::cond info.params.length > 0 || info.returns != null || info.throws.length > 0 || info.defaultValue != null::>
+	<tbody>
+		<col width="10%"/>
+  		<col width="100%"/>
+		<tr ::cond info.params.length > 0::>
+			<th colspan="2">Parameters:</th>
+		</tr>
+		::foreach param info.params::
+			<tr>
+				<td>::raw param.value::</td>
+				<td>::raw param.doc::</td>
+			</tr>
+		::end::
+		<tr ::cond info.defaultValue != null::>
+			<th>Default value:</th>
+			<td>::raw info.defaultValue.doc::</td>
+		</tr>
+		<tr ::cond info.returns != null::>
+			<th>Returns:</th>
+			<td>::raw info.returns.doc::</td>
+		</tr>
+		<tr ::cond info.throws.length > 0::>
+			<th colspan="2">Throws:</th>
+		</tr>
+		::foreach throws info.throws::
+			<tr>
+				<td>::raw throws.value::</td>
+				<td>::raw throws.doc::</td>
+			</tr>
+		::end::
+	</tbody>
+</table>

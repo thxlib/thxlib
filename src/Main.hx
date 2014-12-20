@@ -111,7 +111,7 @@ ${item.readme}';
   }
 
   function generatePages() {
-    haxelibRun(["dox",
+    Sys.command("./dox", [
       "--output-path", '${tmp}pages',
       "--input-path", '${tmp}xml',
       //"--template-path", '',
