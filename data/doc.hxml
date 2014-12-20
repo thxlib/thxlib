@@ -31,10 +31,10 @@
 -java _
 -D xmldoc
 
-#--next
-#-xml tmp/xml/cs.xml
-#-cs _
-#-D xmldoc
+--next
+-xml tmp/xml/cs.xml
+-cs _
+-D xmldoc
 
 --next
 -xml tmp/xml/python.xml
