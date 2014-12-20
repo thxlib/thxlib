@@ -36,8 +36,8 @@
 #-cs _
 #-D xmldoc
 
-#--next
-#-xml tmp/xml/python.xml
-#-python _
-#--macro "exclude('python.internal.StringImpl')"
-#-D xmldoc#
+--next
+-xml tmp/xml/python.xml
+-python _
+--macro "exclude('python.internal.StringImpl')"
+-D xmldoc
