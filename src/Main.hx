@@ -2,10 +2,10 @@ import haxe.Json;
 import sys.io.File;
 import sys.io.Process;
 import yaml.Yaml;
-using thx.core.Arrays;
-using thx.core.Strings;
+using thx.Arrays;
+using thx.Strings;
 using StringTools;
-import thx.core.Objects;
+import thx.Objects;
 
 class Main {
   static var libraryListFile = "data/libraries.json";
