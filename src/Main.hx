@@ -3,6 +3,7 @@ import sys.io.File;
 import sys.io.Process;
 import yaml.Yaml;
 using thx.Arrays;
+using thx.Functions;
 using thx.Strings;
 using StringTools;
 import thx.Objects;
@@ -42,9 +43,9 @@ class Main {
       setHaxelibPath(haxelibPath);
 
       // install requirements
-      requirements.pluck(haxelibInstall(_.name));
+      requirements.map.fn(haxelibInstall(_.name));
 
-      libraryInfo = libraries.pluck(library(_.name));
+      libraryInfo = libraries.map.fn(library(_.name));
       // assemble doc
       assembleDocHxml();
       // generate doc xml
@@ -94,7 +95,7 @@ ${item.readme}';
   }
 
   function generateProjectsInfo() {
-    var info = libraryInfo.pluck(_.info),
+    var info = libraryInfo.map.fn(_.info),
         yaml = Yaml.render(info);
 
       File.saveContent('../thxlib.github.io/_data/libraries.yml', yaml);
