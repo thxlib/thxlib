@@ -1,6 +1,7 @@
 [
   { "name" : "thx.core" },
   { "name" : "thx.color" },
+  { "name" : "thx.csv" },
   { "name" : "thx.culture" },
   { "name" : "thx.format" },
   { "name" : "thx.promise" },
